@@ -1,0 +1,45 @@
+.hook-component() {
+  .card {
+    color: #fff;
+    background-color: @button-primary-bg;
+    max-width: 360px;
+    margin: 40px auto ;
+    display: flex;
+    flex-direction: column;
+  }
+
+  & .card-header {
+    border-bottom: 1px solid hsla(0, 0%, 100%, .15);
+    padding: 31px 17px;
+    margin-bottom: 56px;
+
+    & .card-title {
+      .no-margin;
+    }
+    & .card-subtitle {
+      opacity: .5;
+    }
+  }
+  & .card-body {
+    margin-bottom: 50px;
+    padding: 0 35px;
+
+    & .card-info-title {
+      opacity: .5;
+    }
+
+    & .card-info-content {
+      font-weight: 500;
+    }
+  }
+  & .card-footer {
+    margin-bottom: 50px;
+    padding: 0 35px;
+
+    & .card-actions {
+      & .button {
+        display: flex;
+      }
+    }
+  }
+}

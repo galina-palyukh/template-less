@@ -1,0 +1,119 @@
+@button-primary-bg: #38ad9e;
+@button-primary-color: #fff;
+
+@button-secondary-bg: #fff;
+@button-secondary-color: #38ad9e;
+
+@button-thirdly-bg: #fff;
+@button-thirdly-color: #38ad9e;
+
+@button-box-shadow:0 5px 25px rgba(56,173,158,.5);
+@button-border:2px solid;
+@button-border-color:#38ad9e;
+
+
+
+@button-border-radius: 20px;
+
+
+
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius:  @radius;
+}
+
+
+
+
+.hook-button() {
+  &.button-primary{
+    background-color:@button-primary-bg;
+    color: @button-primary-color;
+
+  }
+
+  &.button-secondary {
+    background-color:@button-secondary-bg;
+    color: @button-secondary-color;
+  }
+
+  &.button-thirdly{
+    background-color:@button-thirdly-bg;
+    color: @button-thirdly-color;
+
+    }
+
+
+  &.button-primary,
+  &.button-secondary,
+  &.button-thirdly{
+    box-shadow: @button-box-shadow;
+    .border-radius(@button-border-radius);
+    text-transform: uppercase;
+
+  }
+  &.button-primary,
+  &.button-secondary{
+    border: @button-border @button-border-color;
+
+  }
+}
+
+
+.hook-button-hover() {
+  &.button-primary,
+  &.button-secondary {
+    background-color: lighten(@button-primary-bg, 5%);
+    color: @button-primary-color;
+    border: @button-border lighten(@button-border-color, 5%);
+  }
+
+
+  &.button-thirdly{
+    background-color: #fff;
+    color: #38ad9e;
+    opacity: .8;
+  }
+
+
+
+
+}
+
+
+.hook-button-focus() {
+  &.button {
+    background-color: saturate(@button-primary-bg, 30%);
+    color: @button-primary-color;
+    border: @button-border saturate(@button-border-color, 30%);
+  }
+
+}
+
+
+  .hook-button-active(){
+
+    &.button {
+      background-color: lighten(@button-primary-bg, 5%);
+      color: @button-primary-color;
+      border: @button-border lighten(@button-border-color, 5%);
+    }
+}
+
+
+  .hook-button-disabled(){
+    &.button {
+      background-color: saturate(@button-primary-bg, 30%);
+      color: @button-primary-color;
+      border: @button-border saturate(@button-border-color, 30%);
+    }
+}
+
+
+
+
+
+
+
+
